@@ -1,6 +1,5 @@
 const {resolve} = require('path');
 const AutoExport = require('webpack-auto-export');
-const {withSentryConfig} = require('@sentry/nextjs');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -14,9 +13,7 @@ const nextConfig = {
     localeDetection: false,
   },
   webpack: (config) => {
-    const fileLoaderRule = config.module.rules.find(
-        (rule) => rule.test && rule.test.test('.svg'),
-    );
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
     fileLoaderRule.exclude = /\.svg$/;
     config.module.rules.push({
       test: /\.svg$/,
@@ -46,8 +43,4 @@ const nextConfig = {
   },
 };
 
-const sentryWebpackPluginOptions = {
-  silent: true,
-};
-
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
+module.exports = nextConfig;
