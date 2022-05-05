@@ -1,0 +1,51 @@
+// media queries vars
+$mobile-m: 320px;
+$tablet-m: 576px;
+$tablet: 768px;
+$tablet-l: 992px;
+$desktop: 1024px;
+$desktop-l: 1100px;
+$wide: 1200px;
+$wide-l: 1440px;
+
+// @extend
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+%flex-align {
+  display: flex;
+  align-items: center;
+}
+
+// variable width
+%header-text {
+  color: $secondary-1;
+
+  &:hover {
+    color: $secondary-5;
+  }
+}
+
+%dark-background {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "true_filter",
+  "short_name": "true_filter",
+  "description": "true_filter",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#bf9425",
+  "background_color": "#bf9425",
+  "scope": "/",
+  "splash_pages": null
+}

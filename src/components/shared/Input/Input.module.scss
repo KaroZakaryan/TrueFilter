@@ -1,0 +1,13 @@
+.container {
+  padding: 4px 10px;
+  background: $white;
+  border-radius: 2px;
+  width: 240px;
+  border: 1px solid $neutra-5;
+
+  &__input {
+    border: none;
+    margin: 0;
+    width: 100%;
+  }
+}

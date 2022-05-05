@@ -1,0 +1,63 @@
+.header {
+  @extend %flex-center;
+  width: 100%;
+  z-index: 9999;
+  margin-top: 20px;
+
+  &__container {
+    @extend %flex-between;
+    gap: 14px;
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint(wide) {
+      gap: 10px;
+    }
+
+    @include breakpoint(tablet-m) {
+      gap: 12px;
+    }
+
+    &__navbar {
+      @include breakpoint(desktop) {
+        display: none !important;
+      }
+    }
+
+    &__left {
+      gap: 16px;
+
+      &__logo_link {
+        display: flex;
+
+        @include breakpoint(tablet-m) {
+          svg {
+            width: 32px;
+            height: 33px;
+          }
+        }
+      }
+    }
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    height: 534px;
+    width: calc(100% + 200px);
+    z-index: -1;
+    background-image: url('/images/HomeBackground.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 50% 50%;
+
+    @include breakpoint(tablet) {
+      height: 460px;
+    }
+
+    @include breakpoint(tablet-m) {
+      height: 500px;
+      background-image: url('/images/MobileBackground.png');
+    }
+  }
+}

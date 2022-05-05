@@ -1,0 +1,22 @@
+.button {
+  @include button(12px 21px);
+  background-color: $white;
+  color: $main-button-color;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+
+  &:disabled {
+    background: linear-gradient(0deg, #c0b9d3, #c0b9d3),
+      linear-gradient(
+        92.75deg,
+        #d76792 -150.38%,
+        #635bff -94.33%,
+        #7856f1 -50.34%,
+        #d76792 3.49%,
+        #635bff 45.35%,
+        #7856f1 87.55%
+      );
+    cursor: not-allowed;
+  }
+}

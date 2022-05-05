@@ -1,0 +1,61 @@
+.menu {
+  display: none;
+  background-color: $white;
+  z-index: 99;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  transition: right 0.4s;
+
+  @include breakpoint(desktop) {
+    display: block;
+  }
+
+  @include breakpoint(tablet-m) {
+    width: 272px;
+    right: -272px;
+  }
+
+  &_open {
+    right: 0;
+  }
+
+  &__list {
+    margin: 70px 16px 20px;
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__link {
+      color: $secondary-1;
+      padding: 14px 10px 14px 8px;
+    }
+
+    &__dropdown {
+      margin-top: 16px;
+    }
+  }
+  &__button {
+    background: linear-gradient(
+      93.29deg,
+      #d76792 13.93%,
+      #635bff 90.54%,
+      #7856f1 152.73%,
+      #d76792 233.86%,
+      #635bff 313.33%,
+      #7856f1 376.91%
+    );
+    color: $white;
+    border-radius: 8px;
+    border: none;
+  }
+}
+
+.background {
+  @extend %dark-background;
+}

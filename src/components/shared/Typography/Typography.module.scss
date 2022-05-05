@@ -1,0 +1,12 @@
+.container {
+  @extend %flex-center;
+
+  &_capitalized {
+    text-transform: capitalize;
+  }
+
+  &__icon {
+    margin-left: 15px;
+  }
+}
+
